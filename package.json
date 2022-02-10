@@ -1,0 +1,21 @@
+{
+  "name": "react_template",
+  "dependencies": {
+    "bootstrap": "*",
+    "react": "*",
+    "react-bootstrap": "*",
+    "react-dom": "*",
+    "react-router-dom": "*",
+    "react-scripts": "*",
+    "sass": "*"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version"
+    ]
+  }
+}

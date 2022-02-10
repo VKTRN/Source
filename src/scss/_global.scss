@@ -1,0 +1,48 @@
+button:focus, a:focus, input:focus{
+  border: none !important;
+}
+
+a{
+  text-decoration: none;
+  color: black 
+}
+
+button{
+  border-style: none;
+  background-color: transparent;
+}
+
+input{
+  border-style: none;
+  
+  &:focus-visible{
+    outline: none;
+  }
+}
+
+ul{
+  list-style-type: none;
+}
+
+.hidden{
+  display: none !important;
+  pointer-events: none;
+}
+
+.white-svg{
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.black-svg{
+  filter: brightness(0) saturate(100%);
+}
+
+.no-scroll{
+  overflow: hidden;
+}
+
+.flex-center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

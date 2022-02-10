@@ -1,0 +1,222 @@
+.Navbar1{
+
+  box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.58);
+
+  .navbar-top{
+    overflow: hidden;
+    height:$navbarTopHeightMobile;
+    background-color: #589bff;
+
+    .container-lg{
+      gap:4%;
+
+      .nav-top{
+        gap:2.25%;
+        width:100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .navbar-brand{
+          margin: 0;
+          img{
+            width:150px;
+            margin-right: 0 !important;
+            @include media-breakpoint-up(lg){
+              width:200px;
+            }
+          }
+        }
+
+        .search{
+          display: none;
+          margin: auto;
+          box-shadow: none;
+
+          :focus{
+            box-shadow: none;
+          }
+
+          button{
+            background-color: white;
+            border: none;
+          }
+
+          img{
+            width:23px;
+          }
+
+          @include media-breakpoint-up(md) {
+            width:22.5rem !important;
+            display:flex;
+          }
+          @include media-breakpoint-up(lg) {
+            width:33.125rem !important;
+            margin: initial !important;
+            margin-right: auto !important;
+          }
+          @include media-breakpoint-up(xl) {
+            width:25.625rem !important;
+          }
+        }
+
+        .navbar-top-links{
+          display: flex;
+          align-items: center;
+
+          .nav-link{
+            color: white !important;
+          }
+
+          img{
+            width:17px;
+            @include media-breakpoint-up(ms){
+              width:25px !important;
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xl){
+      height: $navbarTopHeightDesktop !important;
+    }
+
+  }
+
+  .navbar-bottom{
+    padding:0;
+    .container{
+      justify-content: center;
+      height:100%;
+
+      .navbar-nav{
+        height:100%;
+
+        .collapse{
+          justify-content: center;
+          height:100%;
+
+          .nav-links{
+            height:100%;
+          }
+
+          .dropdown-menu{
+            border: none;
+            background-color: #589bff;
+            border-radius: 0;
+          }
+
+          .nav-links:hover{
+            background-color: #4377c5;
+            img{
+              filter: brightness(0) saturate(100%) invert(100%) ;
+            }
+          }
+
+          .dropdown-toggle:after {
+            display: none !important;
+          }
+        }
+      }
+
+    }
+
+    @include media-breakpoint-up(xl){
+      height:$navbarBottomHeight;
+    }
+  }
+
+  .mobile-search{
+    display: flex;
+    background-color: rgb(233, 233, 233);
+    padding:.5rem;
+    position:absolute;
+    top:$navbarTopHeightMobile;
+    z-index:998;
+
+    :focus{
+      box-shadow: none;
+    }
+
+    button{
+      background-color: white;
+      border: none;
+
+      &:focus{
+        border:none;
+      }
+    }
+  }
+}
+
+.offcanvas{
+  top:$navbarTopHeightMobile;
+
+  .offcanvas-body{
+
+    &::-webkit-scrollbar{
+      display:none;
+    }
+
+    padding: 0rem !important;
+
+    .accordion{
+    margin:0 !important;
+
+
+
+    .accordion-item{
+        border:none;
+
+        .accordion-button{
+          cursor: pointer;
+          transition: color 200ms;
+          border-radius: 0;
+          padding-top:.5rem;
+          padding-bottom:.75rem;
+          transition: all 200ms ease;
+
+          // &:not(.collapsed){
+          //   color: initial;
+          //   background-color: initial;
+          //   box-shadow: none;
+          // }
+
+          &:focus{
+            background-color: initial;
+            color:initial;
+            box-shadow: none;
+            &:after{
+              filter: brightness(0) saturate(100%) ;
+            }
+          }
+          &:hover, &:not(.collapsed){
+            background-color: #4377c5;
+            color:white;
+            img{
+              filter: brightness(0) saturate(100%) invert(100%) ;
+            }
+            &:after{
+              filter: brightness(0) saturate(100%) invert(100%) ;
+            }
+
+          }
+        }
+
+        .accordion-link{
+          cursor: pointer;
+        }
+    }
+    }
+  }
+
+  @include media-breakpoint-up(xl){
+      top:$navbarTopHeightDesktop;
+  }
+}
+
+@media all and (min-width: 992px) { // open dropdown on hover
+    .navbar .nav-item .dropdown-menu{ display: none; }
+    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
