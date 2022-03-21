@@ -1,10 +1,10 @@
-import {useRef} from "react"
-import './scss/custom.scss';
+import PortalDemo from "./components/PortalDemo";
 
 function App() {
 
   return (
     <div className="App">
+      <PortalDemo></PortalDemo>
     </div>
   );
 }
