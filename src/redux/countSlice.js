@@ -11,9 +11,12 @@ const countSlice = createSlice({
     },
     subtract: (state) => {
       state.value -= 1
+    },
+    addNumber: (state, action) => {
+      state.value += action.payload
     }
   }
 }) 
 
-export const {add, subtract} = countSlice.actions
+export const {add, subtract, addNumber} = countSlice.actions
 export default countSlice.reducer
