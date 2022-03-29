@@ -1,0 +1,21 @@
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button{
+  display: block;
+  width: 4.5vw;
+}
+
+.container{
+  width: 10vw;
+  height: 10vh;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: coral;
+}
