@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  gap:3vw;
 }
 
 button{
@@ -26,4 +27,22 @@ input{
   justify-content: space-around;
   align-items: center;
   background-color: coral;
+}
+
+.token-container{
+  position: relative;
+  width:8vw;
+  // background-color: coral;
+  padding:1rem;
+  border-radius: .5rem;
+  word-wrap: break-word;
+  box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.3);
+  height:15rem;
+  width:7rem;
+
+  .title{
+    position: absolute;
+    top:-1.2rem;
+    left: 0;
+  }
 }
