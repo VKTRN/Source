@@ -1,12 +1,17 @@
 const path    = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CustomPlugin = require('./customPlugin')
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    app: './src/index3.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "index.bundle.js",
+    filename: "[name].bundle.js",
   },
   devServer: {
     port: 3000,
@@ -31,6 +36,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [new MiniCssExtractPlugin()]
+  plugins: [
+    // new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new CustomPlugin()
+  ]
 
 }
